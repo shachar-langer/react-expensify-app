@@ -1,2 +1,9 @@
+# Generated modules and files
 node_modules/
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
+
+# Playground folder
 src/playground
