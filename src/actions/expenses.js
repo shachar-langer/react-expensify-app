@@ -15,7 +15,7 @@ export const startAddExpense = (expenseData = {}) => {
         } = expenseData
         const expense = { description, note, amount, createdAt }
         
-        // We return the promise so we can test it.
+        // We return the promise so we can test it or use it to call then.
         // React middleware mechanism doesn't use it
         return database.ref('expenses')
             .push(expense)
@@ -38,3 +38,25 @@ export const editExpense = (id, updates) => ({
     id,
     updates
 })
+
+export const setExpenses = (expenses) => ({
+    type: 'SET_EXPENSES',
+    expenses
+})
+
+export const startSetExpenses = () => {
+    return (dispatch) => {
+        return database.ref('expenses')
+            .once('value')
+            .then((snapshot) => {
+                const expenses = []
+                snapshot.forEach((childSnapshot) => {
+                    expenses.push({
+                        id: childSnapshot.key,
+                        ...childSnapshot.val()
+                    })
+                })
+                dispatch(setExpenses(expenses))
+            })
+    }
+}
