@@ -4,3 +4,6 @@ public/dist/
 
 # Playground folder
 src/playground
+
+# Classified configuration file
+.env.*
