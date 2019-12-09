@@ -1,0 +1,36 @@
+.button {
+    background: $blue;
+    border: none;
+    color: white;
+
+    /* This property is mainly for the links that we want to style like button.
+    Links are defined inline and without this property, the links don't take the
+    margin and padding set on them */
+    display: inline-block;
+
+    font-size: $font-size-large;
+    font-weight: 300;
+
+    /* This is also for links that we want to style like buttons. We don't need extra line height
+    because the links will always be defined on one line and not on several lines */
+    line-height: 1;
+
+    padding: $s-size;
+
+    // This is also for links that we want to style like buttons
+    text-decoration: none;
+}
+
+.button--link {
+    background: none;
+}
+
+.button--link:focus {
+
+    // Removing the blue boarder when clicking on the button
+    outline: none;
+}
+
+.button--secondary {
+    background: #888;
+}

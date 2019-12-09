@@ -1,10 +1,19 @@
+* {
+    /* This attribute value is 'content-box' by default. It add the padding and border to the final height of elements.
+    When this attribute is set to 'border-box' it takes the height we specified and remove the padding and border
+    attributes from it. The rest of the space will be for the content */
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
+    color: $dark-grey;
     font-family: Helvetica, Arial, sans-serif;
     font-size: $m-size;
+    line-height: 1.6;
 }
 
 button {

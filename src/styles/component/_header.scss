@@ -1,0 +1,24 @@
+.header {
+    background: $dark-blue;
+}
+
+.header__content {
+
+    // Making sure the button and title are centered and not spread all the way up and down
+    align-items: center;
+
+    display: flex;
+
+    // Distrbute the space between the expensify title and the logout button
+    justify-content: space-between;
+
+    padding: $s-size 0;
+}
+
+.header__title {
+    color: white;
+    text-decoration: none;
+    h1 {
+        margin: 0;
+    }
+}

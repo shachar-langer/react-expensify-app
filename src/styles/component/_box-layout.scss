@@ -1,0 +1,46 @@
+.box-layout {
+    /* The browser see only the files that are inside the public folder.
+    This is his root folder, so when we access files, we give the relative path from it. */
+    background: url('/images/bg.jpg');
+
+    /* if we adjust the screen height and width or adjust the image, this property make sure
+    it'll cover the entire box layout */
+    background-size: cover;
+
+    // define a flex box
+    display: flex;
+
+    // Center the box
+    align-items: center;
+    justify-content: center;
+
+    /* vh = viewport height
+       vw = viewport width
+    by default, the image takes only the size of the button, so we need to configure it to spread on the entire screen */
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-layout__box {
+    // We set fade-out the give the box a slightly transparent look
+    background: fade-out(white, .15);
+
+    border-radius: 3px;
+
+    padding: $l-size $m-size;
+
+    // center the text in the box
+    text-align: center;
+
+    // box width
+    width: 25rem
+}
+
+.box-layout__title {
+
+    // Setting the margin to 0 except the bottom, because with the padding of the box there's too much space
+    margin: 0 0 $m-size 0;
+
+    // all text has line height to make sure there's space when your text has multiple lines
+    line-height: 1;
+}

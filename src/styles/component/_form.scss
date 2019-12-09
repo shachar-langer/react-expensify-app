@@ -1,0 +1,16 @@
+.form {
+
+    // The flex box doesn't work recursivly. The direct children will take the full width, but not their children
+    display: flex;
+    flex-direction: column;
+
+    // The '>' is to select direct children of the form
+    > * {
+        margin-bottom: $m-size;
+    }
+}
+
+.form__error {
+    margin: 0 0 $m-size 0;
+    font-style: italic;
+}

@@ -1,0 +1,14 @@
+.show-for-mobile {
+    // if we're on a desktop, we want this selector to be invisible
+    @media (min-width: $desktop-breakpoint) {
+        display: none;
+    }
+}
+
+.show-for-desktop {
+    /* if we're on a mobile, we want this selector to be invisible
+    We substruct the .01rem to make sure we're not showing both moblie and desktop display */
+    @media (max-width: $desktop-breakpoint - .01rem) {
+        display: none;
+    }
+}

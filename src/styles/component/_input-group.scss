@@ -1,0 +1,28 @@
+.input-group {
+
+    display: flex;
+    flex-direction: column;
+    margin-bottom: $m-size;
+
+    // Setup styles for desktop (and not mobile)
+    @media (min-width: $desktop-breakpoint) {
+        // Making sure the items inside the group will go from left to right and not top to bottom
+        flex-direction: row;
+        margin-bottom: $l-size;
+    }
+}
+
+.input-group__item {
+
+    // for mobile devices, we need to have a margin between the items as they are stacked top to bottom
+    margin-bottom: $s-size;
+
+    // Setup styles for desktop (and not mobile)
+    @media (min-width: $desktop-breakpoint) {
+
+        // for desktop, we need to reset the bottom margin and set the right margin between the items
+        // as they go from left to right
+        margin: 0 $s-size 0 0;
+    }
+}
+

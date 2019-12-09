@@ -1,0 +1,11 @@
+.content-container {
+
+    // If the width of the window is biffer than 'max-width' we distrbute the margin evenly on both sides
+    margin: 0 auto;
+
+    // Making sure the content is not pushed against the browser borders from the right and the left
+    padding: 0 $m-size;
+
+    // The content will be restricted to 80rem maximum
+    max-width: 80rem;
+}

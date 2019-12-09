@@ -1,0 +1,82 @@
+.list-header {
+    background: $off-white;
+    border: 1px solid darken($off-white, 7%);
+    color: $grey;
+    display: flex;
+    justify-content: space-between;
+    padding: $s-size $m-size;
+}
+
+.list-body {
+    margin-bottom: $m-size;
+
+    @media (min-width: $desktop-breakpoint) {
+        margin-bottom: $l-size;
+    }
+}
+
+.list-item {
+
+    // mobile configuration
+
+    border: 1px solid darken($off-white, 7%);
+    border-top: none;
+
+    /* we need define the color again (after we defined the same color globally)
+    becase the text is link and by default it has a different color */
+    color: $dark-grey;
+
+    display: flex;
+    flex-direction: column;
+    padding: $s-size;
+    text-decoration: none;
+
+    // We want to color of the background to slowly change when we hover over it
+    transition: background .3s ease;
+    // equivalent to adding a new selector for hover .list-item:hover. & takes everyting form parent selector
+    &:hover {
+        background: $off-white;
+    }
+
+    // desktop configuration
+    @media (min-width: $desktop-breakpoint) {
+        align-items: center;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: $m-size;
+    }
+}
+
+.list-item--message {
+
+    // we want the "No expenses" message to be aligned to the center
+    align-items: center;
+    color: $grey;
+    justify-content: center;
+    padding: $m-size;
+    &:hover {
+        background: none;
+    }
+}
+
+.list-item__title {
+    margin: 0;
+    word-break: break-all;
+}
+
+.list-item__subtitle {
+    color: $grey;
+    font-size: $font-size-small;
+}
+
+.list-item__data {
+
+    // for mobile
+    margin: $s-size 0 0 0;
+
+    // for desktop
+    @media (min-width: $desktop-breakpoint) {
+        margin: 0;
+        padding-left: $s-size;
+    }
+}
