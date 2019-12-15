@@ -7,3 +7,6 @@ src/playground
 
 # Classified configuration file
 .env.*
+
+# macOS .DS_Store files
+**/.DS_Store
